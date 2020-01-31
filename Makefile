@@ -1,6 +1,6 @@
 cc=gcc
 cflags=-Wall -Werror -ggdb
-name=bin
+name=nav.bin
 hfile=nav.h
 src=main.c mypwd.c myls.c
 obj=main.o mypwd.o myls.o
