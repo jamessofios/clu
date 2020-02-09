@@ -7,7 +7,7 @@
 #define NAV_H
 
 //functions
-int ls(void);
+int ls(char* path);
 char* pwd(void);
 
 #endif
