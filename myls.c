@@ -13,9 +13,11 @@ int ls(void){
 		struct dirent *ep;
 
 		while( ( ep = readdir(dp) ) ){
-			puts(ep->d_name);
+			//puts(ep->d_name);
+			printf("%s ", ep->d_name);
 			counter++;
 		}
+		putchar('\n');
 		(void)closedir(dp);
 	}
 	else
