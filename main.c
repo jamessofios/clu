@@ -5,6 +5,7 @@
 #include "nav.h"
 int main(void){
 	char* c = pwd();
+	puts("____");
 	puts(c);
 	puts("____");
 	int s = ls();
