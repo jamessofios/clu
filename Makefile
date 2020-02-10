@@ -1,5 +1,9 @@
 cc=gcc
-cflags=-Wall -Werror -ggdb
+#choose to either strip, or debug
+#cflags=-s
+dflags=-ggdb
+#####
+wflags=-Wall -Werror
 name=nav.bin
 hfile=nav.h
 src=main.c mypwd.c myls.c
@@ -9,9 +13,9 @@ obj=main.o mypwd.o myls.o
 all: $(name)
 
 $(name): $(obj)
-	$(cc) $(cflags) -o $@ $^
+	$(cc) $(wflags) $(dflags) $(cflags) -o $@ $^
 
 $(obj): $(src)
-	$(cc) $(cflags) -c $^
+	$(cc) $(wflags) $(dflags) -c $^
 clean:
 	$(RM) $(name) *.o

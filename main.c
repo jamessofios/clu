@@ -10,11 +10,11 @@ int main(int argc, char** argv){
 	}else{
 		c = argv[1];
 	}
-	puts("____");
+	//puts("____");
 	puts(c);
-	puts("____");
+	//puts("____");
 	int s = ls(c);
-	puts("____");
+	//puts("____");
 	printf("Total: %d\n", s);
 	return 0;
 }
