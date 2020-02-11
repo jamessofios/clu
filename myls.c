@@ -15,11 +15,11 @@ int ls(char* path){
 		struct dirent *ep;
 
 		while( ( ep = readdir(dp) ) ){
-			//puts(ep->d_name);
-			printf("%s ", ep->d_name);
+			puts(ep->d_name);
+			//printf("%s ", ep->d_name);
 			counter++;
 		}
-		putchar('\n');
+		//putchar('\n');
 		(void)closedir(dp);
 	}
 	else

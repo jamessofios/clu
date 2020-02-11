@@ -1,22 +1,19 @@
-cc=gcc
-cflags=-s
-dflags=-ggdb
-wflags=-Wall -Werror
-name=nav.bin
-hfile=nav.h
-src=main.c mypwd.c myls.c
-obj=main.o mypwd.o myls.o
-.PHONY=clean all debug
+name = wt
+cc = gcc
+cflags = -s
+wflags = -ggdb -Wall -Werror
+src := $(wildcard *.c)
+hf := $(wildcard *.h)
+obj := $(patsubst %.c,%.o,$(wildcard *.c))
+.PHONY = clean cleanobj all
 
 all: $(name)
 
 $(name): $(obj)
-	$(cc) $(wflags) $(cflags) -o $@ $^
-
-$(obj): $(src)
-	$(cc) $(wflags) -c $^
-debug:
-	$(cc) $(wflags) $(dflags) -c $(src)
-	$(cc) $(wflags) $(dflags) -o $(name) $(obj)
-clean:
-	$(RM) $(name) *.o
+	$(cc) $(wflags) -o $@ $^
+$(obj): %.o: %.c $(hf)
+	$(cc) $(wflags) -c $<
+clean: cleanobj
+	$(RM) $(name)
+cleanobj:
+	$(RM) *.o

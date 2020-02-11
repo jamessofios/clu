@@ -4,17 +4,19 @@
 #include <stdio.h>
 #include "nav.h"
 int main(int argc, char** argv){
-	char*c;
+
+	char* dir_arg;
+
 	if(argc == 1){
-		c = pwd();
+		dir_arg = pwd();
+		puts(dir_arg);
 	}else{
-		c = argv[1];
+		dir_arg = argv[1];
 	}
-	//puts("____");
-	puts(c);
-	//puts("____");
-	int s = ls(c);
-	//puts("____");
-	printf("Total: %d\n", s);
+
+	//int s =
+	ls(dir_arg);
+	//printf("Total: %d\n", s);
+
 	return 0;
 }
