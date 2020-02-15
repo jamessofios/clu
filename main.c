@@ -8,11 +8,9 @@ int main(int argc, char** argv){
 
 	char* dir_arg;
 
-	if(argc == 1){
+	if (argc == 1) {
 
 		dir_arg = pwd();
-
-		puts(dir_arg);
 
 	} else {
 
@@ -20,9 +18,11 @@ int main(int argc, char** argv){
 
 	}
 
+	puts(dir_arg);
+
 	int s = ls(dir_arg);
 
-	printf("Total: %d\n", s);
+	printf("%d\n", s);
 
 	return 0;
 }
