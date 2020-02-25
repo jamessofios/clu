@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "nav.h"
 
-int main(int argc, char** argv){
+int main (int argc, char** argv) {
 
 	char* dir_arg;
 

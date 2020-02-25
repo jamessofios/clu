@@ -8,8 +8,9 @@
 # define NAV_H
 
   //functions
-  int ls(char* path);
-  char* pwd(void);
+  int ls (char* path);
+
+  char* pwd (void);
 
 #endif
 //end include guard

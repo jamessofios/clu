@@ -6,23 +6,26 @@
 #include <dirent.h>
 #include "nav.h"
 
-int ls(char* path){
+int ls (char* path) {
 
 	DIR *dp;
 
-	if(path != NULL) dp = opendir(path);
+	if (path != NULL) dp = opendir(path);
 
 	else dp = opendir("./");
 
 	int counter = 0;
 
-	if(dp != NULL){
+	if (dp != NULL) {
 
 		struct dirent *ep;
 
-		while( ( ep = readdir(dp) ) ){
+		while ( ( ep = readdir(dp) ) ) {
+
 			puts(ep->d_name);
+
 			counter++;
+
 		}
 
 		(void)closedir(dp);
