@@ -19,7 +19,7 @@ void cat (char* file_name)
 	// Read contents from file
 	c = fgetc(fptr);
 
-	while (c != EOF){
+	while (!feof(fptr)){
 		printf ("%c", c);
 		c = fgetc(fptr);
 	}
