@@ -1,10 +1,10 @@
-# wt: A command line utility.
+# wt: a command line utility.
 This program functions as a combination of pwd, ls, and cat. This program is not a fork.
 
 ## How to compile:
 Inside this git repository run:
 ```
-$ make #compiles the program
+$ make #compiles the program.
 
 $ make cleanobj #removes object files. leaves behind the final binary.
 
