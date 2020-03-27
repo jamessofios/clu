@@ -1,40 +1,20 @@
-#ifndef _GNU_SOURCE
-# define _GNU_SOURCE
-#endif
+#include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <dirent.h>
 #include "nav.h"
 
-int ls (char* path) {
+int ls (char* path)
+{
+	struct dirent **list;
+	int count = scandir(path, &list, NULL, alphasort);
 
-	DIR *dp;
-
-	if (path != NULL) dp = opendir(path);
-
-	else dp = opendir("./");
-
-	int counter = 0;
-
-	if (dp != NULL) {
-
-		struct dirent *ep;
-
-		while ( ( ep = readdir(dp) ) ) {
-
-			puts(ep->d_name);
-
-			counter++;
-
-		}
-
-		(void)closedir(dp);
-
+	if( count < 0 ){
+		perror("Couldn't open the directory");
+		exit(1);
 	} else {
-
-		perror("Could not open directory");
+		for (int i = 0; i < count; i++)
+			puts(list[i]->d_name);
 	}
-
-	return counter;
-
+	return count;
 }

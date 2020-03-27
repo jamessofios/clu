@@ -1,18 +1,21 @@
+#pragma once
+
 #ifndef _GNU_SOURCE
-# define _GNU_SOURCE
+#define _GNU_SOURCE
 #endif
 
-//include guard
-#ifndef NAV_H
+	int ls (char* path);
+	/*
+	* returns total file & dir count; prints listings to stdout
+	*/
 
-# define NAV_H
+	char* pwd (void);
+	/*
+	* returns the pwd
+	*/
 
-  //functions
-  int ls (char* path); // returns total file & dir count; prints to stdout
-
-  char* pwd (void); // returns the pwd
-
-  void cat (char* file); // prints contents of a text file to stdout
-
-#endif
-//end include guard
+	void cat (char* file);
+	/*
+	* prints contents of a text file to stdout
+	* input for this function is a filename as a char array
+	*/

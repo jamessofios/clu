@@ -5,7 +5,6 @@
 void cat (char* file_name)
 {
 	FILE *fptr;
-
 	char c;
 
 	// Open file
@@ -19,12 +18,11 @@ void cat (char* file_name)
 	// Read contents from file
 	c = fgetc(fptr);
 
+	// Print file contents
 	while (!feof(fptr)){
 		printf ("%c", c);
 		c = fgetc(fptr);
 	}
-
 	fclose(fptr);
-
 	return;
 }
