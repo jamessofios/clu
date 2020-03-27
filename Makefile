@@ -1,5 +1,5 @@
 name = wt
-cc = tcc
+cc = gcc
 cflags = -s
 wflags = -ggdb -Wall -Werror
 src := $(wildcard *.c)
