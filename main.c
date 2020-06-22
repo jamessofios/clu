@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "nav.h"
 #include <string.h>
+#include "nav.h"
+
 int main (int argc, char** argv)
 {
 	int s = 0;
-	switch (argc) {
+	switch(argc){
 		case 2:
 			puts(argv[1]);
 			s = ls(argv[1]);
