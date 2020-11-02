@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <dirent.h>
-#include "nav.h"
+#include "clu.h"
 
 int ls (char* path)
 {

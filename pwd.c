@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "nav.h"
+#include "clu.h"
 
 char* pwd(void)
 {

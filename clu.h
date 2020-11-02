@@ -1,9 +1,4 @@
 #pragma once
-
-#ifndef _GNU_SOURCE
-#define _GNU_SOURCE
-#endif
-
 	int ls (char* path);
 	/*
 	* returns total file & dir count; prints listings to stdout

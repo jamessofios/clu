@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "nav.h"
+#include "clu.h"
 
 void cat (char* file_name)
 {

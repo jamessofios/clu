@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "nav.h"
+#include "clu.h"
 
 int main (int argc, char** argv)
 {
