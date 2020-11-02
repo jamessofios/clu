@@ -1,4 +1,4 @@
-name = wt
+name = clu
 cc = gcc
 cflags = -s
 wflags = -ggdb -Wall -Werror
