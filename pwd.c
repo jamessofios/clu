@@ -10,7 +10,7 @@ char* pwd(void)
 	if(getcwd(cwd, sizeof(cwd)) != NULL){
 		return getcwd(cwd, sizeof(cwd));
 	} else {
-		perror("getcwd() error");
+		perror("getcwd() error!");
 		exit(1);
 	}
 }

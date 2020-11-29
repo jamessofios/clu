@@ -8,15 +8,14 @@ void cat (char* file_name)
 	char c;
 	fptr = fopen(file_name, "r");
 	if (fptr == NULL) {
-		printf("Cannot open file \n");
+		perror("Cannot open file!\n");
 		exit(1);
 	}
 	c = fgetc(fptr);
 	while (!feof(fptr)){
-		printf ("%c", c);
+		printf("%c", c);
 		c = fgetc(fptr);
 	}
 	fclose(fptr);
 	fptr = NULL;
-	return;
 }

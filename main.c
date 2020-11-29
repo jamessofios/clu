@@ -4,23 +4,45 @@
 
 int main (int argc, char** argv)
 {
-	int s = 0;
-	switch(argc){
-		case 2:
-			puts(argv[1]);
-			s = ls(argv[1]);
-			printf("Total: %d\n",s);
-			break;
-		case 3:
-			if (argv[1][0] == 'r') {
-				cat(argv[2]);
-			}
-			break;
-		default:
+	if(argc == 1 || !strcmp(argv[1], "pwd")){
+
+		puts(pwd());
+	}
+	else if(!strcmp(argv[1], "ls")) {
+
+		unsigned int count = 0;
+
+		if(argc == 2){
+
 			puts(pwd());
-			s = ls(pwd());
-			printf("Total: %d\n", s);
-			break;
+			count = ls(pwd());
+			printf("Total: %d\n", count);
+		}
+		else {
+			for(int i = 2; i < argc; i++){
+
+				puts(argv[i]);
+				count = ls(argv[i]);
+				printf("Total: %d\n", count);
+			}
+		}
+
+	}
+	else if(!strcmp(argv[1], "cat")) {
+
+		for(int i = 2; i < argc; i++){
+
+			cat(argv[i]);
+
+		}
+
+	}
+	else if(!strcmp(argv[1], "rm")) {
+
+		for(int i = 2; i < argc; i++){
+
+			remove(argv[i]);
+		}
 	}
 	return 0;
 }

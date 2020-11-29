@@ -14,9 +14,13 @@ $ make clean #removes compiled program and object files.
 ## How to use:
 Inside this git repository run:
 ```
-$ ./clu #lists current directory.
+$ ./clu #prints current directory.
 
-$ ./clu /home/$USER #lists your user's home directory.
+$ ./clu pwd #prints current directory.
 
-$ ./clu r /path/to/file.txt #print at plaintext file to STDOUT.
+$ ./clu ls #lists current directory.
+
+$ ./clu ls /home/$USER #lists your user's home directory.
+
+$ ./clu cat /path/to/file.txt #print at plaintext file to STDOUT.
 ```
