@@ -20,7 +20,10 @@ $ ./clu pwd #prints current directory.
 
 $ ./clu ls #lists current directory.
 
-$ ./clu ls /home/$USER #lists your user's home directory.
+$ ./clu ls dir1 dir2 #lists 1 or many directories
 
-$ ./clu cat /path/to/file.txt #print at plaintext file to STDOUT.
+$ ./clu cat file1.txt file2.txt #concatenates 1 or many files, prints to STDOUT
+
+$ ./clu rm file1.txt file2.txt #deletes 1 or many files
+
 ```
