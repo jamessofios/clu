@@ -2,9 +2,9 @@
 #include <string.h>
 #include "clu.h"
 
-int main (int argc, char** argv)
+int main(int argc, char** argv)
 {
-	if(argc == 1 || !strcmp(argv[1], "pwd")){
+	if (argc == 1 || !strcmp(argv[1], "pwd")) {
 
 		puts(pwd());
 
@@ -31,17 +31,15 @@ int main (int argc, char** argv)
 	} else if (!strcmp(argv[1], "cat")) {
 
 		for (int i = 2; i < argc; i++) {
-
 			cat(argv[i]);
-
 		}
 
 	} else if (!strcmp(argv[1], "rm")) {
 
 		for (int i = 2; i < argc; i++) {
-
 			remove(argv[i]);
 		}
+
 	} else if (!strcmp(argv[1], "rename")) {
 		rename(argv[2], argv[3]);
 	}

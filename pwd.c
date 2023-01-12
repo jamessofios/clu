@@ -7,7 +7,8 @@
 char* pwd(void)
 {
 	char cwd[PATH_MAX];
-	if(getcwd(cwd, sizeof(cwd)) != NULL){
+
+	if (getcwd(cwd, sizeof(cwd)) != NULL) {
 		return getcwd(cwd, sizeof(cwd));
 	} else {
 		perror("getcwd() error!");
